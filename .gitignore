@@ -86,3 +86,8 @@ GPATH
 GRTAGS
 GSYMS
 GTAGS
+
+
+# New added
+######################
+scripts/onnxruntime/

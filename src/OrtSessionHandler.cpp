@@ -11,7 +11,7 @@
 
 #include "ort_utility/ort_utility.hpp"
 
-#include <onnxruntime/core/providers/cuda/cuda_provider_factory.h>
+// #include <onnxruntime/core/providers/cuda/cuda_provider_factory.h>
 #include <onnxruntime/core/session/onnxruntime_cxx_api.h>
 
 #include <algorithm>
@@ -196,9 +196,9 @@ void OrtSessionHandler::OrtSessionHandlerIml::initSession()
     // consumption using openmp
     sessionOptions.SetIntraOpNumThreads(1);
 
-    if (m_gpuIdx.has_value()) {
-        Ort::ThrowOnError(OrtSessionOptionsAppendExecutionProvider_CUDA(sessionOptions, m_gpuIdx.value()));
-    }
+    // if (m_gpuIdx.has_value()) {
+    //     Ort::ThrowOnError(OrtSessionOptionsAppendExecutionProvider_CUDA(sessionOptions, m_gpuIdx.value()));
+    // }
 
     sessionOptions.SetGraphOptimizationLevel(GraphOptimizationLevel::ORT_ENABLE_ALL);
     m_session = Ort::Session(m_env, m_modelPath.c_str(), sessionOptions);

@@ -5,7 +5,7 @@ set (CMAKE_CXX_STANDARD 17)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
-set(onnxruntime_INSTALL_PREFIX /usr/local)
+set(onnxruntime_INSTALL_PREFIX /data1/onnx_runtime_cpp/scripts/onnxruntime/)
 set(onnxruntime_INCLUDE_DIRS
   ${onnxruntime_INSTALL_PREFIX}/include/onnxruntime
   ${onnxruntime_INSTALL_PREFIX}/include/onnxruntime/core/session
